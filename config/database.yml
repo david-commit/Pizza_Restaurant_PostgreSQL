@@ -79,10 +79,10 @@ test:
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #======================
-# production:
-#   <<: *default
-#   database: pizza_rest_production
-#   username: pizza_rest
-#   password: <%= ENV["PIZZA_REST_DATABASE_PASSWORD"] %>
 production:
-  url: <%= ENV["DATABASE_URL"] %>
+  <<: *default
+  database: pizza_rest_production
+  username: pizza_rest
+  password: <%= ENV["PIZZA_REST_DATABASE_PASSWORD"] %>
+# production:
+#   url: <%= ENV["DATABASE_URL"] %>
